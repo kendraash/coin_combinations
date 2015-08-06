@@ -3,7 +3,7 @@ class Fixnum
     change = self
     final_change = []
 
-    if change < 99 && change >= 25
+    if change >= 25
       change_quarter = change./(25)
       change = change.%(25)
       quarter = change_quarter.to_s().concat(" quarter")
