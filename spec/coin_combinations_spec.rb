@@ -12,5 +12,9 @@ describe('Fixnum#coin_combinations') do
     expect(15.coin_combinations()).to(eq("1 dime and 1 nickel"))
   end
   it ("takes an amount of money less than 50 and returns the change with the least amount of coins") do
-    expect(47.coin_)
+    expect(47.coin_combinations()).to(eq("1 quarter and 2 dime and 2 pennies"))
   end
+  it("takes an amount of money less than 99 and returns the change with the least amount of coins") do
+    expect(72.coin_combinations()).to(eq("2 quarter and 2 dime and 2 pennies"))
+  end
+end

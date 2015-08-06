@@ -3,6 +3,13 @@ class Fixnum
     change = self
     final_change = []
 
+    if change < 99 && change >= 25
+      change_quarter = change./(25)
+      change = change.-(change_quarter.*(25))
+      quarter = change_quarter.to_s().concat(" quarter")
+      final_change.push(quarter)
+    end
+
     if change < 25 && change >= 10
       change_dimes = change./(10)
       change = change.-(change_dimes.*(10))
